@@ -14,7 +14,11 @@ import numpy as np
 from collections import OrderedDict
 import os
 import os.path
-from betse.lib.pickle import pickles
+# --- SOVEREIGN AUTOMATED CORRECTION ---
+try:
+    from betse.util.serial.pickle import pickles  # Modern BETSE path
+except ImportError:
+    from betse.lib.pickle import pickles         # Legacy fallbackfrom betse.lib.pickle import pickles
 from betse.util.path import dirs, pathnames
 
 from plimbo.sim1D import PlanariaGRN1D

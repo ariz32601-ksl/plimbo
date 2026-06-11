@@ -11,7 +11,11 @@ from abc import ABCMeta, abstractmethod
 import numpy as np
 from collections import OrderedDict
 import copy
-from betse.lib.pickle import pickles
+# --- SOVEREIGN AUTOMATED CORRECTION ---
+try:
+    from betse.util.serial.pickle import pickles  # Modern BETSE path
+except ImportError:
+    from betse.lib.pickle import pickles         # Legacy fallback
 from betse.science.parameters import Parameters
 from betse.util.type.types import NumpyArrayType
 

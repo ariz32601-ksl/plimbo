@@ -1,0 +1,9 @@
+numpy>=1.24.0
+matplotlib>=3.7.0
+scipy>=1.10.0
+pillow>=9.5.0
+notebook>=7.0.0
+scikit-learn>=1.2.0
+# Reference your local accelerated backend
+-e /Users/admin_m3_1/betse
+

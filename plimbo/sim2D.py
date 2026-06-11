@@ -25,7 +25,10 @@ from betse.science import filehandling as fh
 from betse.science.math import modulate
 from betse.util.path import files
 from betse.science.phase.phasecls import SimPhase
-from betse.science.phase.phaseenum import SimPhaseKind
+try:
+    from betse.science.phase.phasecls import SimPhaseKind  # Modern BETSE path
+except ImportError:
+    from betse.science.phase.phaseenum import SimPhaseKind  # Legacy fallback
 from betse.science.math import toolbox as tb
 from plimbo.simabc import PlanariaGRNABC
 from sklearn.cluster import DBSCAN

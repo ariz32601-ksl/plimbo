@@ -74,3 +74,7 @@ __pycache__/
 *~
 *.log
 *.sw?
+
+# Ignore Jupyter checkoints and modern macOS clutter
+.ipynb_checkpoints/
+.DS_Store
